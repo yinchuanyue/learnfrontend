@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+
+<body>
+    <table id="mytable"></table>
+
+    <script type="text/javascript">
+        var xmlhttp = new XMLHttpRequest()
+        xmlhttp.open("GET", "data.txt", false)
+        xmlhttp.send(null)
+        var datatxt = xmlhttp.responseText
+        var dataobj = JSON.parse(datatxt)
+        tablediv = document.getElementById("mytable")
+        tablediv.setAttribute("border", "1")
+        for (i = 0; i < 3; i++) {
+            mytr = document.createElement("tr");
+            tablediv.appendChild(mytr)
+            for (j = 0; j < 2; j++) {
+                mytd = document.createElement("td")
+                mytd.innerHTML = dataobj[i][j]
+                mytr.appendChild(mytd)
+            }
+        }
+    </script>
+        
+</body>
+
+</html>

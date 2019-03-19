@@ -1,0 +1,57 @@
+#myInput {
+    
+    background-image: url('https://static.runoob.com/images/mix/searchicon.png'); 
+    background-position: 10px 12px; /* 定位搜索按钮 */
+    background-repeat: no-repeat; /* 不重复图片 */
+    width: 50%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px; 
+}
+#btn{BORDER-RIGHT: #7b9ebd 2px solid; /*右边线*/
+    background: -webkit-linear-gradient(top,#66B5E6,#2e88c0);
+    background: -moz-linear-gradient(top,#66B5E6,#2e88c0);
+   background: linear-gradient(top,#66B5E6,#2e88c0);
+    background: -ms-linear-gradient(top,#66B5E6,#2e88c0);
+    PADDING-RIGHT: 8px; /*内边距 右*/
+    BORDER-TOP: #7b9ebd 2px solid; /*上边线*/
+    PADDING-LEFT: 8px; /*内边距 左*/
+    FONT-SIZE: 20px; /*文字大小*/
+    BORDER-LEFT: #7b9ebd 2px solid;/* 左边线*/
+    cursor: pointer; /*鼠标移上去时，变成手形。*/
+    COLOR:#ffffff; /*颜色黑 （表示文字颜色）*/
+    PADDING-TOP: 3px; /*内边距 上*/
+    BORDER-BOTTOM: #7b9ebd 2px solid ;/*底边线*/
+    padding-bottom: 3px;
+    box-shadow: 0 1px 2px #8AC1E2 inset,0 -1px 0 #316F96 inset;
+    text-shadow: 1px 1px 0.5px #22629B;
+    font-family: fantasy;
+    border-radius: 5px;
+
+}
+
+#singTable{
+    border-collapse: collapse; 
+    width: 100%; 
+    border: 1px solid #ddd;
+    font-size: 18px; 
+}
+#singTable th{cursor: pointer; background: #eee}
+#singTable tr:nth-child(even){background: #f9f9f9}
+
+#singTable th, #singTable td {
+    text-align: left;
+    padding: 12px;
+   
+}
+
+#singTable tr {
+    /* 表格添加边框 */
+    border-bottom: 1px solid #ddd; 
+}
+
+#singTable tr.header, #singTable tr:hover {
+    /* 表头及鼠标移动过 tr 时添加背景 */
+    background-color: #f1f1f1;
+}

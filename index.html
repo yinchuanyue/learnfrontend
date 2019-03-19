@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" type="text/css" />
+</head>
+
+<body>
+
+
+    <input id="myInput" type="text" placeholder="请输入你想搜的歌名">
+    <button id="btn" onclick="myId()">搜索</button>
+
+    <!-- 
+    <table id="singTable">
+        <thead>
+        <tr class="header">
+            <th data-type="number"  style="width:5%;">id</th>
+            <th data-type="string"  style="width:10%;">name</th>
+            <th data-type="date"  style="width:10%;">时间</th>
+            <th data-type="string"  style="width:10%;">author</th>
+            <th  data-type="string"  style="width:*">简介</th>
+        
+        </tr>
+        </thead>
+        <tbody
+        <tr >
+            <td>1</td>
+            <td>死了都要爱</td>
+            <td>2002-3-12</td>
+            <td>信乐团</td>
+            <td>《死了都要爱》是台湾摇滚乐队信乐团2002年演唱的歌曲，由姚若龙作词，Yoo Hae Jin作曲，收录于信乐团2002年5月14日发行的专辑《SHIN 同名专辑》中</td>
+        </tr>
+        <tr >
+            <td>3</td>
+            <td>演员</td>
+            <td>2015-05-20</td>
+            <td>薛之谦</td>
+            <td>演员》是由歌手薛之谦创作并演唱的一首歌曲，由薛之谦谱曲、填词并演唱，收录于2015年5月20日薛之谦发行的EP《绅士》和2016年薛之谦发行的专辑《初学者》中 </td>
+        </tr>
+        <tr >
+            <td>2</td>
+            <td>探清水河</td>
+            <td>不详</td>
+            <td>不详</td>
+            <td>探清水河》是流行于北京市海淀区火器营村的叙事歌，讲述了清末民初发生在火器营村的一个类似孔雀东南飞的爱情悲剧。</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>雨一直下</td>
+            <td>1999-09-01</td>
+            <td>张宇</td>
+            <td>《雨一直下》是张宇演唱的歌曲，由十一郎填词、张宇谱曲，迈克尔·汤姆森编曲，收录于张宇1999年9月1日发行的专辑《雨一直下》。</td>
+        </tr>
+        <tr >
+            <td>5</td>
+            <td>一剪梅</td>
+            <td>1983-04-02</td>
+            <td>费玉清</td>
+            <td>一剪梅最早收录于费玉清1983年4月推出的《长江水·此情永不留》专辑 [1-2]  ，1984年成为同名电视剧片头曲， [3]  该歌曲后又成为2009年霍建华、吕一主演电视剧《新一剪梅》的片头曲。该歌曲后又成为2015年沈腾、马丽主演电影《夏洛特烦恼》的宣传曲。</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>挪威森林</td>
+            <td>1996-03-04</td>
+            <td>伍佰</td>
+            <td>挪威的森林》是伍佰演唱的一首歌曲，由伍佰作词、作曲、编曲，收录在伍佰1996年发行的专辑《爱情的尽头》中。这首歌曲是伍佰的代表作之一</td>
+        </tr>
+        </tbody>
+    </table> -->
+    <div ng-app="app">
+        <div ng-controller="ctrl">
+            <table border="1" cellspacing="0" id="singTable">
+                <thead>
+                    <tr class="header">
+                        <th data-type="num" style="width:5%;">id</th>
+                        <th data-type="string" style="width:10%;">歌曲名</th>
+                        <th data-type="date" style="width:10%;">时间</th>
+                        <th data-type="string" style="width:10%;">作者</th>
+                        <th data-type="string" style="width:*">简介</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users">
+                        <!-- <td>{{user.id}}</td>
+                            <td>{{user.name}}</td>
+                            <td>{{user.age}}</td>
+                            <td>{{user.birthday}}</td>
+                            <td>{{user.city}}</td> -->
+                        <td>
+                            <span ng-bind="user.id"></span>
+                        </td>
+                        <td>
+                            <span ng-bind="user.title"></span>
+                        </td>
+                        <td>
+                            <span ng-bind="user.birthday"></span>
+                        </td>
+                        <td>
+                            <span ng-bind="user.name"></span>
+                        </td>
+                        <td>
+                            <span ng-bind="user.paragraph"></span>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="http://mockjs.com/dist/mock.js"></script>
+    <script src="https://cdn.bootcss.com/angular.js/1.6.9/angular.min.js"></script>
+    <script src="index.js"></script>
+
+    <script src="mymock.js"></script>
+ 
+</body>
+
+</html>
